@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Vegetable Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🥦 Local Vegetable Store</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#cart">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Section -->
+    <section id="products">
+      <h2>Available Vegetables</h2>
+      <div class="product-list" id="product-list">
+        <!-- JS দিয়ে পণ্য যুক্ত হবে -->
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p><strong>Total: Rs.<span id="cart-total">0</span></strong></p>
+      <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <input type="text" id="name" placeholder="আপনার নাম" required>
+        <input type="text" id="phone" placeholder="মোবাইল নাম্বার" required>
+        <input type="text" id="address" placeholder="ডেলিভারি ঠিকানা" required>
+        <button type="submit">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Local Vegetable Store</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
