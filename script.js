@@ -69,3 +69,23 @@ document.getElementById("checkout-form").addEventListener("submit", function(e) 
   clearCart();
   this.reset();
 });
+
+// products.json থেকে ডেটা লোড করা
+fetch('products.json')
+  .then(response => response.json())
+  .then(data => {
+    let container = document.getElementById("product-list");
+    container.innerHTML = "";
+
+    data.forEach(product => {
+      container.innerHTML += `
+        <div class="product">
+          <h3>${product.name}</h3>
+          <p>Rs.${product.price}</p>
+        </div>
+      `;
+    });
+  })
+  .catch(error => console.log("Error loading products:", error));
+
+
